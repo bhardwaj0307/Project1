@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+{%block content%}
+{% for i in row%}
+<h2>Project Details</h2>
+
+<ul>
+    <li>{{i.cname}}</li>
+    <li>{{i.pname}}</li>
+    <li>{{i.pdes}}</li>
+    <li>{{i.cdetail}}</li>
+    <li>{{i.pdeadline}}</li>
+    <li>{{i.pstartdate}}</li>
+    <li>{{i.pmanagedby}}</li>
+    <li>{{i.pcontract}}</li>
+    <li>{{i.pstatus}}</li>
+  </ul>
+{%endfor%}
+
+<h2>Task Details </h2>
+<a href="http://localhost:8000/addtask" class="btn-outline-primary">Add Task</a>
+{% for k in tasks%}
+<ul>
+    <li>{{k.Tid}}</li>
+    <li>{{k.Ttitle}}</li>
+    <li>{{k.Ttechnology}}</li>
+    <li>{{k.Tdeadline}}</li>
+    <li>{{k.Tstatus}}</li>
+</ul>
+<hr>
+<hr>
+{%endfor%}
+
+{%endblock%}

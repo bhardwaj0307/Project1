@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+{%block content%}
+<h2>My Task</h2>
+{%for i in obj%}
+<ul>
+    <li>{{i.Tid}}</li>
+    <li>{{i.Ttitle}}</li>
+    <li>{{i.Ttechnology}}</li>
+    <li>{{i.Tdeadline}}</li>
+    <li>{{i.Tstatus}}</li>
+</ul>
+<hr>
+{%endfor%}
+{%endblock%}
